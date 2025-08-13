@@ -1,0 +1,21 @@
+function analyzeSentence(sentence) {
+    let length = 0;
+    let words = 0;
+    let vowels = 0;
+    let vowelList = "aeiouAEIOU";
+
+    for (let i = 0; i < sentence.length; i++) {
+        let ch = sentence[i];
+        length++;
+        if (ch === ' ') words++;
+        if (vowelList.includes(ch)) vowels++;
+    }
+
+    words++;
+
+    console.log("Length:", length);
+    console.log("Words:", words);
+    console.log("Vowels:", vowels);
+}
+
+analyzeSentence("This is a simple sentence.");
